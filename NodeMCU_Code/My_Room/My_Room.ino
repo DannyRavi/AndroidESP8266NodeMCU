@@ -2,8 +2,8 @@
 #include <ESP8266WebServer.h>
 
 //Our Wi-Fi ssdid and password
-char* ssid = "Nuranee_2G!";
-char* password = "0870252574";
+char* ssid = "Your_Wi-fi_SSID";
+char* password = "Your_Wi-fi_Password";
 String room_light = "0";
 String mirror_light = "0";
 String bed_light = "0";
