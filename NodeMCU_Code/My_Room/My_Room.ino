@@ -2,8 +2,8 @@
 #include <ESP8266WebServer.h>
 
 //Our Wi-Fi ssdid and password
-char* ssid = "WirelessName"; //Put your Wi-Fi ssdid here
-char* password = "password"; //Your Wi-Fi Password
+char* ssid = "Nuranee_2G!";
+char* password = "0870252574";
 String room_light = "0";
 String mirror_light = "0";
 String bed_light = "0";
@@ -17,15 +17,15 @@ void setup() {
   //Making Connection With netword
   WiFi.begin(ssid, password);
   
-  //Serial.begin(115200);
-  //Serial.print("Searching Connection");
+  Serial.begin(115200);
+  Serial.print("Searching Connection");
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
     delay(500);
   }
   
   Serial.println("");
-  Serial.print("IP Address: "); //Show the IP Address to access your NodeMCU
+  Serial.print("IP Address: ");
   Serial.print(WiFi.localIP());
   
   serverSection();
@@ -34,7 +34,6 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   server.handleClient();
-
 }
 
 void initializePin(){
@@ -52,7 +51,7 @@ void initializePin(){
 
 void serverSection(){
   server.on("/", []() {
-    server.send(200, "text/html", "<!DOCTYPE html><html><meta charset='UTF-8'><head></head><body><h2>Sulkiflee's Room</h2><h3><a href='/room_light'>ไฟห้อง</a></h3><br><h3><a href='/mirror_light'>ไฟหน้ากระจก</a></h3><br><h3><a href='/bed_light'>ไฟเตียง</a></h3><br><h3><a href='/fan'>พัดลม</a></h3><br></body></html>");
+    server.send(200, "text/html", "<!DOCTYPE html><html><meta charset='UTF-8'><head></head><body><h2>Dzulkiflee's Room</h2><h3><a href='/room_light'>Room Light</a></h3><br><h3><a href='/mirror_light'>Mirror Light</a></h3><br><h3><a href='/bed_light'>Bed Light</a></h3><br><h3><a href='/fan'>Fan</a></h3><br></body></html>");
   });
 
   server.on("/room_light", room_light_state);
@@ -114,7 +113,7 @@ void fan_state(){
 }
 
 void all_state(){
+  
   server.send(200, "text/html", "{'rl':'"+room_light+"','ml':'"+mirror_light+"','bl':'"+bed_light+"','fan':'"+fan+"'}");
+
 }
-
-
