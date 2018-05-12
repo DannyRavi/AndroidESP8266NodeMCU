@@ -1,39 +1,24 @@
 package com.pombingsoft.myroom;
 
-import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Objects;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity implements OnDataSendToActivity {
 
     ImageView bg_state;
     Button btn_rl, btn_mr, btn_bed, btn_fan;
-    TextView txt_network, txt_temp, txt_hum;
+    TextView txt_network;
     String url = "http://192.168.x.x/"; //Define your NodeMCU IP Address here Ex: http://192.168.1.4/
 
     @Override
@@ -41,10 +26,8 @@ public class MainActivity extends AppCompatActivity implements OnDataSendToActiv
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bg_state = (ImageView)findViewById(R.id.bg_status);
-        txt_network = (TextView)findViewById(R.id.txt_network);
-        //txt_temp = (TextView)findViewById(R.id.temp);
-        //txt_hum = (TextView)findViewById(R.id.hum);
+        bg_state = findViewById(R.id.bg_status);
+        txt_network = findViewById(R.id.txt_network);
 
 
         final Handler handler = new Handler();
@@ -65,10 +48,10 @@ public class MainActivity extends AppCompatActivity implements OnDataSendToActiv
         }, 5000);  //the time is in miliseconds
 
 
-        btn_rl = (Button)findViewById(R.id.room);
-        btn_mr = (Button)findViewById(R.id.mirror);
-        btn_bed = (Button)findViewById(R.id.bed);
-        btn_fan = (Button)findViewById(R.id.fan);
+        btn_rl = findViewById(R.id.room);
+        btn_mr = findViewById(R.id.mirror);
+        btn_bed = findViewById(R.id.bed);
+        btn_fan = findViewById(R.id.fan);
 
         btn_rl.setOnClickListener(new View.OnClickListener() {
             @Override
