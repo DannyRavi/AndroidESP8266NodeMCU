@@ -7,5 +7,4 @@ This Project has used direct connection from your Android Phone to ESP8266 NodeM
 detail for login screen
 
 password = admin@gmail.com
-
 password = abc123456
