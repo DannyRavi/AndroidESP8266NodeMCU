@@ -14,7 +14,6 @@ login/Email = admin@gmail.com
 password = abc123456
 
 **application pictures...**<br/>
-
-<img src="Image/login.png" width="60%" />
-<img src="images/panel.png" width="60%" />
+<img src="Image/login.png" width="35%" />
+<img src="images/panel.png" width="35%" />
 
