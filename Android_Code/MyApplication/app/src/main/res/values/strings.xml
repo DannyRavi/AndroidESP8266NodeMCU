@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">My Room</string>
+    <string name="app_name">Secure Car</string>
+
+    <string name="hello_world">Successful!</string>
+    <string name="action_settings">Settings</string>
 </resources>

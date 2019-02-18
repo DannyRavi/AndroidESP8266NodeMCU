@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pombingsoft.myroom.MainActivity">
+    tools:context="com.dannyravi.maycar.MainActivity">
 
     <ImageView
         android:id="@+id/bg_status"
@@ -24,14 +24,15 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="5dp"
         android:padding="6dp"/>
+
     <Button
         android:id="@+id/my_room"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_rec"
-        android:text="My Room"
-        android:textSize="18sp"
-        android:clickable="false"/>
+        android:clickable="false"
+        android:text="My Car"
+        android:textSize="18sp" />
 
     <!--
     <RelativeLayout
@@ -87,22 +88,22 @@
             android:layout_centerHorizontal="true">
 
             <Button
-                android:id="@+id/room"
+                android:id="@+id/Engine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableBottom="@drawable/power_off"
                 android:background="@drawable/button_rec"
-                android:text="Room Light"
+                android:text="Engine"
                 android:textSize="16sp"
                 android:layout_margin="5dp"
                 android:padding="10dp" />
             <Button
-                android:id="@+id/mirror"
+                android:id="@+id/Doors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableBottom="@drawable/power_off"
                 android:background="@drawable/button_rec"
-                android:text="Mirror Light"
+                android:text="Doors"
                 android:textSize="16sp"
                 android:layout_margin="5dp"
                 android:padding="10dp" />
@@ -112,22 +113,22 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true">
             <Button
-                android:id="@+id/bed"
+                android:id="@+id/HeadLight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableBottom="@drawable/power_off"
                 android:background="@drawable/button_rec"
-                android:text="Bed Light"
+                android:text="HeadLight"
                 android:textSize="16sp"
                 android:layout_margin="5dp"
                 android:padding="10dp" />
             <Button
-                android:id="@+id/fan"
+                android:id="@+id/Taillight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableBottom="@drawable/power_off"
                 android:background="@drawable/button_rec"
-                android:text="Table Fan"
+                android:text="Taillight"
                 android:textSize="16sp"
                 android:layout_margin="5dp"
                 android:padding="10dp" />
