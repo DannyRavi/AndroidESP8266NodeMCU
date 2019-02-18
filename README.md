@@ -15,5 +15,6 @@ password = abc123456
 
 **application pictures...**<br/>
 <img src="Image/login.png" width="35%" />
-<img src="images/panel.png" width="35%" />
+<img src="Image/panel.png" width="35%" />
+
 
